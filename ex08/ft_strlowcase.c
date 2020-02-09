@@ -6,21 +6,20 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 11:43:24 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/09 11:43:27 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/09 16:12:30 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char    *ft_strlowcase(char *str)
+char	*ft_strlowcase(char *str)
 {
-    unsigned int i;
+	unsigned int i;
 
-    i = 0;
-    while (str[i])
-    {
-        if (str[i] >= 65 && str[i] <= 90)
-            str[i] += 32;
-        i++;
-    }
-    return (str);
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] >= 65 && str[i] <= 90)
+			str[i] += 32;
+		i++;
+	}
+	return (str);
 }
-

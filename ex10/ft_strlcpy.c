@@ -6,7 +6,7 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 11:43:47 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/09 11:44:11 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/09 17:11:31 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_sizeof(char *tab)
 	return (i);
 }
 
-char    *ft_strlcpy(char *dest, char *src, unsigned int size)
+char	*ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int i;
 
@@ -35,4 +35,3 @@ char    *ft_strlcpy(char *dest, char *src, unsigned int size)
 	dest[i] = '\0';
 	return (ft_sizeof(src));
 }
-
