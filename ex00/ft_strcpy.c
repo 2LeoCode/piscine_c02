@@ -6,7 +6,7 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 10:10:49 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/09 10:11:03 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/10 18:10:17 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@ char	*ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = 0;
 	return (dest);
 }

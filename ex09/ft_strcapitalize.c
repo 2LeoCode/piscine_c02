@@ -6,13 +6,13 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 11:43:36 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/09 16:58:41 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/10 19:44:05 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_is_alpha(char c)
 {
-	if (65 <= c && c <= 90 || 97 <= c && c <= 122)
+	if ((65 <= c && c <= 90) || (97 <= c && c <= 122))
 		return (1);
 	else
 		return (0);
@@ -36,7 +36,8 @@ char	*ft_strcapitalize(char *str)
 	while (str[i])
 	{
 		if (!ft_is_alpha(str[i]) && !ft_is_numeric(str[i]))
-			str[i + 1] -= 32;
+			if(ft_is_alpha(str[i+1]))
+				str[i + 1] -= 32;
 		i++;
 	}
 	return (str);
