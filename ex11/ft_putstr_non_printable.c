@@ -6,7 +6,7 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 11:28:42 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/11 11:58:51 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/11 17:54:52 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_is_printable(char c)
 {
-	if (c > 32 && c < 127)
+	if (c > 31 && c < 127)
 		return (1);
 	else
 		return (0);
@@ -41,8 +41,6 @@ void	ft_calc_hexa(char c)
 			hexa[0] = 49;
 		else
 			hexa[0] = 48;
-		if (c == 32)
-			hexa[0] = 50;
 		hexa[1] = c % 16;
 		if (hexa[1])
 			if (hexa[1] < 10)
