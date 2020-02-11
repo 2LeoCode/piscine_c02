@@ -6,20 +6,19 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 11:42:58 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/10 19:01:00 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/11 11:27:51 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_str_is_printable(char *str)
 {
-	unsigned int	i;
+	int	i;
 
-	i = 0;
-	while (str[i])
+	i = -1;
+	while (str[++i])
 	{
-		if (str[i] < 33)
+		if (str[i] < 33 || str[i] > 126)
 			return (0);
-		i++;
 	}
 	return (1);
 }

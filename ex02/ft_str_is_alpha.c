@@ -6,20 +6,19 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 10:22:14 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/10 18:48:33 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/11 11:28:50 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_str_is_alpha(char *str)
 {
-	unsigned int	i;
+	int	i;
 
-	i = 0;
-	while (str[i])
+	i = -1;
+	while (str[++i])
 	{
 		if (str[i] < 65 || (str[i] > 90 && str[i] < 97) || str[i] > 122)
 			return (0);
-		i++;
 	}
 	return (1);
 }

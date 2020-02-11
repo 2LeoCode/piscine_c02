@@ -6,20 +6,19 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 11:43:10 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/09 16:11:58 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/11 11:27:33 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strupcase(char *str)
 {
-	unsigned int i;
+	int i;
 
-	i = 0;
-	while (str[i])
+	i = -1;
+	while (str[++i])
 	{
 		if (str[i] >= 97 && str[i] <= 122)
 			str[i] -= 32;
-		i++;
 	}
 	return (str);
 }

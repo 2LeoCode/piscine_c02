@@ -6,20 +6,19 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 10:22:32 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/10 18:48:46 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/11 12:01:00 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_str_is_numeric(char *str)
 {
-	unsigned int	i;
+	int	i;
 
-	i = 0;
-	while (str[i])
+	i = -1;
+	while (str[++i])
 	{
 		if (str[i] < 48 || str[i] > 57)
 			return (0);
-		i++;
 	}
 	return (1);
-
+}

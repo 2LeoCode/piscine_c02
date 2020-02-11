@@ -6,19 +6,19 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 10:18:10 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/09 10:18:16 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/11 12:01:41 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i;
+	int i;
 
-	i = 0;
-	while (i < n)
+	i = -1;
+	while (++i < n)
 	{
-		dest[i] = src[i];
-		i++;
+		if (src[i])
+			dest[i] = src[i];
 	}
 	return (dest);
 }
