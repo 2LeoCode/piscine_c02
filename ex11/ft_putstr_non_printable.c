@@ -6,7 +6,7 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 11:28:42 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/11 17:54:52 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/12 17:08:02 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_calc_hexa(char c)
 	if (c == 127)
 	{
 		hexa[0] = '7';
-		hexa[1] = 'F';
+		hexa[1] = 'f';
 	}
 	else
 	{
@@ -46,7 +46,7 @@ void	ft_calc_hexa(char c)
 			if (hexa[1] < 10)
 				hexa[1] += 48;
 			else
-				hexa[1] += 55;
+				hexa[1] += 87;
 		else
 			hexa[1] = 48;
 	}
