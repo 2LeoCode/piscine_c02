@@ -6,7 +6,7 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 11:42:58 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/11 11:27:51 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/12 17:18:23 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		ft_str_is_printable(char *str)
 	i = -1;
 	while (str[++i])
 	{
-		if (str[i] < 33 || str[i] > 126)
+		if (str[i] < 32 || str[i] > 126)
 			return (0);
 	}
 	return (1);

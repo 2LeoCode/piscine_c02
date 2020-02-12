@@ -6,7 +6,7 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 11:43:47 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/11 11:49:54 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/12 20:52:41 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ unsigned int	ft_sizeof(char *tab)
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int i;
+	unsigned int j;
 
 	i = 0;
 	while (i < size - 1)
@@ -33,6 +34,8 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 			break ;
 		i++;
 	}
-	dest[i] = 0;
+	j = ft_sizeof(dest);
+	while (--j >= size)
+		dest[j] = 0;
 	return (ft_sizeof(src));
 }
