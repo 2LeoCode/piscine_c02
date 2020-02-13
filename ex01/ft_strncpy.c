@@ -6,33 +6,33 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 10:18:10 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/12 20:47:52 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/13 17:20:38 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_sizeof(char *tab)
+unsigned int	ft_sizeof(char *tab)
 {
-	int i;
+	unsigned int i;
 
-	i = -1;
-	while (tab[++i])
-		;
+	i = 0;
+	while (tab[i])
+		i++;
 	return (i);
 }
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char			*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int i;
+	unsigned int i;
 
-	i = -1;
-	while (++i < n)
+	i = 0;
+	while (i < n)
 	{
 		if (src[i])
 			dest[i] = src[i];
 		else
 			break ;
+		i++;
 	}
-	i--;
 	while (++i <= n)
 		if (ft_sizeof(src) <= n && dest[i])
 			dest[i] = 0;
